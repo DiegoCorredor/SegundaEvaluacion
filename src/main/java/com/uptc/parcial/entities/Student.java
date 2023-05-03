@@ -16,6 +16,9 @@ public class Student {
     @ManyToOne
     private Subject subject;
 
+    @ManyToOne
+    private Practice practice;
+
     public Student() {
     }
 

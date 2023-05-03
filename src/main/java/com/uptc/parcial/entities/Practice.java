@@ -3,6 +3,7 @@ package com.uptc.parcial.entities;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "practices")
@@ -21,6 +22,9 @@ public class Practice {
 
     @OneToOne
     private Subject subject;
+
+    @OneToMany(mappedBy = "practice")
+    private List<Student> students;
 
     public Practice() {
     }
